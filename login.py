@@ -12,15 +12,16 @@ class Login(ttk.Frame):
         self.ven.resizable(False,False)
         self.ven.config(bg="#aaccff")
         self.ven.wm_attributes("-alpha",0.8)
-        self.ven.overrideredirect(True)
+        #self.ven.overrideredirect(True)
 
-        def Salir():
+        """def Salir():
             self.ven.destroy()
 
         self.boton_salir = tk.Button(self.ven, text="X", 
                                      command=Salir, width="6", height="3")
         self.boton_salir.place(x=290,y=10)
         self.boton_salir.config(bg="#ee99aa")
+        """
 
         #variables
         self.user = tk.StringVar()
@@ -34,8 +35,30 @@ class Login(ttk.Frame):
         self.lblimgLogo.place(x=100,y=50)
         self.lblimgLogo.config(bg="#aaccff")
 
-        self.lblLogo = tk.Label(self.ven, text="Acceso",font=("Arial",18))
-        self.lblLogo.place(x=140,y=200)
-        self.lblLogo.config(bg="#aaccff")
+        self.lblUser = tk.Label(self.ven, text="ACCESO",font=("Arial",16))
+        self.lblUser.place(x=130,y=170)
+        self.lblUser.config(bg="#aaccff")
 
+        #Usuario, label y caja
+        self.lblUser = tk.Label(self.ven, text="Usuario",font=("Arial",16))
+        self.lblUser.place(x=30,y=220)
+        self.lblUser.config(bg="#aaccff")
+
+        self.txtLogo = tk.Entry(self.ven, textvariable=self.user, font=("Arial",18),
+                                width="22")
+        self.txtLogo.place(x=30,y=260)
+        self.txtLogo.config(bg="#ffeeff")
+
+        self.lblPass = tk.Label(self.ven, text="Constraseña",font=("Arial",16))
+        self.lblPass.place(x=30,y=300)
+        self.lblPass.config(bg="#aaccff")
+
+        self.txtPass = tk.Entry(self.ven, textvariable=self.clave, font=("Arial",18),
+                                width="22")
+        self.txtPass.place(x=30,y=330)
+        self.txtPass.config(bg="#ffeeff")
+
+        self.btnIngresar = tk.Button(self.ven, text="Ingresar",width="23",height="2")
+        self.btnIngresar.place(x=33,y=370)
+        self.btnIngresar.config(bg="#ee99aa",font=("Arial",16))
         
